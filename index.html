@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="da" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#ffb82e">
+    <meta name="description" content="Ramme til AU-afgangsprojektet i informationsteknologi">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'">
+    <title>Mit AU-afgangsprojekt</title>
+    <link rel="icon" href="public/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <strong>📚 AU Afgangsprojekt</strong>
+      <button id="themeButton" class="theme-button" type="button" aria-label="Skift farvetema">🌙</button>
+    </header>
+
+    <main>
+      <section class="console" id="app" aria-label="Mit afgangsprojekt">
+        <div class="display-case">
+          <div class="display" id="display" aria-live="polite">
+            <div class="welcome-icon">✏️</div>
+            <p class="kicker">Mit AU-afgangsprojekt</p>
+            <h1>Tryk på en knap</h1>
+            <p class="lead">Vælg den del af projektet, du vil arbejde med.</p>
+            <p class="display-note">🔒 Kun rammen er oprettet – teksten kommer senere</p>
+          </div>
+          <div class="side-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="hinge"><i></i><i></i><i></i></div>
+        <div class="controls">
+          <div class="buttons" id="buttons"></div>
+        </div>
+      </section>
+
+      <section class="info-note">
+        <span>🛡️</span>
+        <div><strong>Kun rammen fra Afgangsprojekt V1</strong><p>Overskrifterne er med. Teksten i dokumentets afsnit er ikke overført.</p></div>
+      </section>
+    </main>
+
+    <footer><span>Version 0.2</span><span>Elektronisk læringsspil · GitHub-klar</span></footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>

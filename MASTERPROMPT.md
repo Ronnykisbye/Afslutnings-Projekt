@@ -55,7 +55,7 @@ Planlægning, indledning, problemstilling, problemformulering, afgrænsning, met
 
 ## Nuværende status
 
-Version 0.1 indeholder knapstruktur, vejledning, lokal statusmåling, fremdriftsring, mørkt/lyst tema, responsivt design og privat hosting. Det egentlige rapportindhold tilføjes senere.
+Version 0.2 bruger et elektronisk læringsspil som designreference: display øverst og store, farverige, fysiske 3D-knapper nederst. Knaprammen følger overskrifterne fra Afgangsprojekt V1, men ingen af dokumentets afsnitstekster er overført. Der findes desuden en statisk GitHub Pages-version i index.html, style.css og app.js. Pages må ikke aktiveres uden udtrykkelig accept af, at adressen bliver offentlig.
 
 ## Næste naturlige arbejde
 

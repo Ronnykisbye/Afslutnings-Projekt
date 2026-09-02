@@ -62,6 +62,10 @@ Projektet bruger React, TypeScript, Vinext/Vite og Cloudflare Workers. De vigtig
 - docs/PROJEKTGRUNDLAG.md – kondenseret faglig arbejdsramme
 - .github/workflows – automatiske build- og sikkerhedskontroller
 
+## GitHub Pages-version
+
+Filerne index.html, style.css og app.js udgør en statisk version, der kan køre direkte med GitHub Pages. GitHub Pages må først aktiveres efter en bevidst beslutning, fordi Pages-adressen bliver offentligt tilgængelig, selv når repositoryet er privat.
+
 ## Status
 
-Version 0.1 – første fungerende prototype.
+Version 0.2 – rammen fra Afgangsprojekt V1 og nyt design som elektronisk læringsspil. Teksten i rapportafsnittene er ikke overført.
