@@ -2,7 +2,7 @@
 
 const sections = [
   { number:"01", shortTitle:"Indhold", title:"Menu og indholdsfortegnelse", icon:"📑", color:"red", shape:"square", text:"Her samles projektets indholdsfortegnelse og overblik over alle afsnit.", resource:{label:"Læs projektgrundlaget",href:"docs/PROJEKTGRUNDLAG.md",format:"markdown"} },
-  { number:"02", shortTitle:"Indledning", title:"Indledning", icon:"📘", color:"orange", shape:"round", text:"Her beskrives projektets emne, baggrund, relevans og den sammenhæng, projektet indgår i." },
+  { number:"02", shortTitle:"Indledning", title:"Indledning", icon:"📘", color:"orange", shape:"round", text:"Min vej fra elektriker til IT-studerende og mine erfaringer med AI.", paragraphs:["Jeg har arbejdet omkring 40 år som elektriker og har derfor en lang praktisk og teknisk baggrund, hvor problemløsning, fejlfinding og forståelse af tekniske systemer har været en naturlig del af mit arbejdsliv. Desværre måtte jeg af helbredsmæssige årsager vælge at omskole mig. Det blev inden for IT og igennem min akademiuddannelse har jeg arbejdet blandt andet med systemdrift, IT-sikkerhed, programmering i Python, cloud, databaser, automatisering, forretningsmæssig IT og anvendelse af kunstig intelligens.","Uddannelsen har været både spændende og krævende. Flere af fagene indeholder meget teori, og en del af undervisningsmaterialet er på engelsk. For mig betyder det meget arbejde med at oversætte og forstå de faglige begreber og omsætte teorien til noget, jeg forstår.","Efter at jeg havde kurset i Anvendelse af kunstig intelligens, begyndte jeg i stigende grad at bruge ChatGPT (AI) som min assistent. I starten var det mest til at oversætte og forklare begreberne i et tempo, som bedre passede til mig. Efterhånden begyndte jeg også at anvende AI til at rette mine opgaver og gennemlæse mine skriftlige opgaver på et mere teknisk niveau.","Jeg har blandt andet i mine senere kurser brugt AI til at hjælpe med programmering som eksempler for de opgaver, jeg skulle løse, eller den har vist mig, hvordan jeg kunne lave normaliserede databaser. Den har hjulpet mig med opsætningen af lokale netværk og med at automatisere processer. Jeg har også brugt AI til sparring til mine skriftlige opgaver, hvor den er kommet med idéer, kritik, struktur og sproglige formuleringer.","Det har vist mig en udvikling, som jeg synes er ret interessant. Opgaver, som tidligere krævede lang tid og faglig fordybelse at løse, kan i dag løses eller understøttes af AI på relativt kort tid. Det gælder for eksempel programmering, databaseopbygning og automatisering.","Men samtidig kan der opstå et dilemma. AI kan være et meget effektivt hjælpemiddel, men det kan også være fristende at overlade en stor del af arbejdet til den slags teknologi. Derfor dukker spørgsmålet op om, hvilke kompetencer der fortsat er brug for eller er nødvendige, når AI i stigende grad kan løse opgaverne, og om det er noget, vi skal være bange for.","Som studerende og med mange års teknisk erfaring og baggrund bliver jeg interesseret i denne udvikling. Hvor jeg tidligere selv skulle løse alle de tekniske udfordringer, føler jeg, at mit fokus er ændret til i højere grad at skulle beskrive det ønskede resultat, opstille krav og kvalitetssikre den løsning, som AI bidrager til at skabe."] },
   { number:"03", shortTitle:"Problem", title:"Problemstilling", icon:"🔍", color:"yellow", shape:"soft", text:"Her beskrives den fagligt væsentlige udfordring, som projektet undersøger." },
   { number:"04", shortTitle:"Spørgsmål", title:"Problemformulering", icon:"🎯", color:"green", shape:"square", text:"Her placeres det præcise hovedspørgsmål og eventuelle underspørgsmål, som konklusionen senere skal besvare." },
   { number:"05", shortTitle:"Metodevalg", title:"Metodevalg og undersøgelsesdesign", icon:"🧪", color:"cyan", shape:"wide", text:"Her begrundes projektets metode, dataindsamling, fremgangsmåde og undersøgelsesdesign." },
@@ -14,7 +14,7 @@ const sections = [
   { number:"11", shortTitle:"Perspektiv", title:"Perspektivering", icon:"🧭", color:"teal", shape:"soft", text:"Her sættes projektets resultater ind i en større faglig eller praktisk sammenhæng." },
   { number:"12", shortTitle:"Kilder", title:"Litteraturliste", icon:"📚", color:"indigo", shape:"square", text:"Her samles alle anvendte bøger, artikler, hjemmesider og øvrige kilder." },
   { number:"13", shortTitle:"Bilag", title:"Bilagsoversigt", icon:"📎", color:"violet", shape:"round", text:"Her samles projektets bilag og en oversigt, der gør dem nemme at finde." },
-  { number:"14", shortTitle:"Endelig opgave", title:"Den endelige projektopgave", icon:"🏆", color:"gold", shape:"wide", text:"Her åbner du den samlede Word- eller PDF-opgave fra OneDrive.", oneDrive:true },
+  { number:"14", shortTitle:"Endelig opgave", title:"Eksamen_Afgangsprojekt arbejds udgave", icon:"🏆", color:"gold", shape:"wide", text:"Her åbner du den opdaterede arbejdsudgave direkte og sikkert i OneDrive.", oneDrive:true },
   { number:"+", shortTitle:"Ekstra", title:"Ekstra plads", icon:"✨", color:"sky", shape:"soft", text:"Reserveområde til et nyt afsnit, en funktion eller et dokument, som vi får brug for senere." }
 ];
 
@@ -84,6 +84,16 @@ function openSection(section, remember = true) {
   const description = document.createElement("p");
   description.textContent = section.text;
   content.append(description);
+  if (section.paragraphs) {
+    const article = document.createElement("article");
+    article.className = "section-article";
+    section.paragraphs.forEach((text) => {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = text;
+      article.append(paragraph);
+    });
+    content.append(article);
+  }
 
   if (section.resource) {
     const readButton = makeButton(`📖 ${section.resource.label}`, "file-link", () => openDocument(section.resource, section.title));
@@ -104,15 +114,14 @@ function openSection(section, remember = true) {
 
 function addOneDriveControls(container) {
   const url = localStorage.getItem("afgang_onedrive_url") || DEFAULT_ONEDRIVE_URL;
-  const readButton = makeButton("📖 Læs projektfilen i appen", "file-link final-file-link", () => openOneDriveDocument(url));
-  const externalButton = makeButton("↗ Åbn i OneDrive", "file-link onedrive-external", () => {
+  const openButton = makeButton("🔐 Åbn sikkert i OneDrive", "file-link final-file-link", () => {
     window.open(url, "_blank", "noopener,noreferrer");
   });
   const changeButton = makeButton("Brug et andet OneDrive-link", "link-settings-button", () => showOneDriveLinkSetup(container));
   const note = document.createElement("p");
   note.className = "private-file-note";
-  note.textContent = "Word-filen bliver i OneDrive. Hvis læseren ikke åbner, kan du bruge knappen Åbn i OneDrive.";
-  container.append(readButton, externalButton, changeButton, note);
+  note.textContent = "Dokumentet bliver i OneDrive og åbnes med Microsofts adgangskontrol.";
+  container.append(openButton, changeButton, note);
 }
 
 function showOneDriveLinkSetup(container) {
@@ -146,44 +155,6 @@ function showOneDriveLinkSetup(container) {
   message.setAttribute("aria-live", "polite");
   setup.append(label, input, save, reset, message);
   container.append(setup);
-}
-
-function openOneDriveDocument(url) {
-  readerOpen = true;
-  displayCase.classList.add("is-expanded");
-  display.classList.add("document-view");
-  document.body.classList.add("reader-open");
-  display.replaceChildren();
-
-  const toolbar = document.createElement("div");
-  toolbar.className = "reader-toolbar";
-  const back = makeButton("‹ Tilbage", "reader-back", closeDocument);
-  const heading = document.createElement("strong");
-  heading.textContent = "Den endelige projektopgave";
-  const close = makeButton("Luk ✕", "reader-close", closeDocument);
-  toolbar.append(back, heading, close);
-
-  const frameWrap = document.createElement("div");
-  frameWrap.className = "office-frame-wrap";
-  const iframe = document.createElement("iframe");
-  iframe.className = "office-frame";
-  iframe.title = "Word-dokument: Den endelige projektopgave";
-  iframe.src = "https://view.officeapps.live.com/op/embed.aspx?src=" + encodeURIComponent(url);
-  iframe.loading = "eager";
-  iframe.referrerPolicy = "no-referrer";
-  iframe.setAttribute("allowfullscreen", "");
-
-  const fallback = document.createElement("div");
-  fallback.className = "office-fallback";
-  const text = document.createElement("p");
-  text.textContent = "Kan du ikke se dokumentet?";
-  const open = makeButton("↗ Åbn direkte i OneDrive", "file-link final-file-link", () => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  });
-  fallback.append(text, open);
-  frameWrap.append(iframe, fallback);
-  display.append(toolbar, frameWrap);
-  updateSideControls();
 }
 
 function isAllowedOneDriveUrl(value) {

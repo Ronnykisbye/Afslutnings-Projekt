@@ -97,3 +97,8 @@ Navigationsknapper må aldrig være små runde knapper med mikrotekst. Tilbage, 
 ## Beslutning i version 0.7
 
 Den delte OneDrive-fil `Eksamen_Afgangsprojekt_med_menuer.docx` er knyttet til knappen Endelig opgave. Appen skal først forsøge at vise Word-dokumentet inde i den udvidede læseskærm via Microsofts Office-læser og samtidig tilbyde direkte åbning i OneDrive som reserve. Selve dokumentet må ikke kopieres til GitHub. Fordi GitHub Pages og browserkoden er offentlige, er det OneDrives delingsindstillinger og eventuelle Microsoft-login, der afgør, hvem der kan læse filen.
+
+
+## Beslutning i version 0.8
+
+Den indbyggede Office-læser er fjernet, fordi et almindeligt OneDrive-delingslink ikke kunne indlæses stabilt i Microsofts eksterne dokumentviser. Endelig opgave skal åbnes direkte i OneDrive, så Microsofts login og delingsindstillinger beskytter dokumentet. Filens aktuelle navn er `Eksamen_Afgangsprojekt arbejds udgave.docx`. Det godkendte afsnit Indledning er offentliggjort i appen som syv læsevenlige tekstafsnit; øvrige rapportafsnit må fortsat kun tilføjes efter Ronnys udtrykkelige godkendelse.

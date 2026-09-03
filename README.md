@@ -93,3 +93,8 @@ Sideknapperne Tilbage, Lys/mørk og Menu er gjort markant større med mindst 44 
 Knappen **Endelig opgave** er nu forbundet med den delte Word-fil `Eksamen_Afgangsprojekt_med_menuer.docx`. Dokumentet forsøges vist i en stor Word-lignende læseskærm inde i appen. Der findes altid **Tilbage**, **Luk** og en reserveknap til at åbne dokumentet direkte i OneDrive. Selve Word-filen kopieres ikke til GitHub.
 
 Bemærk: Det faste delingslink står i den offentlige browserkode. Adgangen til dokumentet styres derfor af OneDrives delingsindstillinger. Hvis filen kun må kunne ses af ejeren, skal OneDrive-linket ændres til **Bestemte personer** eller **Kun dig**, men så kræves Microsoft-login i appen.
+
+
+## Indledning og sikker OneDrive-åbning i version 0.8
+
+Afsnittet **Indledning** fra `Eksamen_Afgangsprojekt arbejds udgave.docx` er indsat som syv læsevenlige afsnit i appens skærm. Kun dette godkendte afsnit er offentliggjort. Knappen **Endelig opgave** viser det nye filnavn og åbner arbejdsudgaven direkte i OneDrive, hvor Microsofts login og delingsindstillinger styrer adgangen. Den fejlramte indbyggede Office-læser er fjernet.
