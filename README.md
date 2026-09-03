@@ -1,71 +1,73 @@
 # Mit AU-afgangsprojekt
 
-Privat arbejdsapp til Ronnys AU-afgangsprojekt i informationsteknologi. Appen gør rapportens dele til store, taktile 3D-knapper og giver et enkelt overblik over fremdriften.
+Offentlig projektapp til Ronnys AU-afgangsprojekt i informationsteknologi. Appen viser rapportens dele som store, farverige og taktile 3D-knapper inspireret af et elektronisk læringsspil.
 
-## Første version
+## Start appen
 
-- 15 interaktive projektknapper, inklusive bilag, den endelige opgave og en reserveknap
-- vejledning til hvert rapportafsnit baseret på projektets samlede arbejdsgrundlag
-- lokal status: **Ikke startet**, **I gang** eller **Færdig**
-- samlet fremdriftsmåler
+**https://ronnykisbye.github.io/Afslutnings-Projekt/**
+
+## Version 0.3
+
+- 15 interaktive projektknapper
+- knapper til bilag, endelig opgave og ekstra plads
+- tydelig blank 3D-effekt og fysisk trykbevægelse
 - mørkt og lyst tema
 - responsivt layout til mobil, tablet og computer
-- privat Sites-udgivelse med adgangskontrol
+- automatisk udgivelse med GitHub Pages
 - ingen annoncer, sporing eller tredjepartsanalyse
 
-Status og temavalg gemmes lokalt i browseren. Rapportens egentlige tekst og filer lægges senere ind i repositoryet og versionsstyres.
+Den offentlige version indeholder kun projektets ramme og overskrifter. Den egentlige rapporttekst tilføjes ikke offentligt uden Ronnys udtrykkelige godkendelse.
 
 ## Projektets områder
 
-1. Planlægning og projektstyring
+1. Indhold og indholdsfortegnelse
 2. Indledning
 3. Problemstilling
 4. Problemformulering
-5. Afgrænsning og definitioner
-6. Metode
-7. Teori og empiri
+5. Metodevalg og undersøgelsesdesign
+6. Teori og modeller
+7. Empiriske data
 8. Analyse
-9. Løsningsforslag og implementering
+9. Kritiske overvejelser
 10. Konklusion
-11. Perspektivering og refleksion
-12. Kilder og litteraturliste
+11. Perspektivering
+12. Litteraturliste
 13. Bilag
 14. Den endelige projektopgave
 15. Ekstra plads
 
-## Udvikling
+## Teknisk opbygning
 
-Projektet bruger React, TypeScript, Vinext/Vite og Cloudflare Workers. De vigtigste kommandoer er npm run install:ci, npm run build og npm test.
+GitHub Pages-versionen bruger almindelig HTML, CSS og JavaScript:
+
+- `index.html` – appens struktur
+- `style.css` – farver, layout og 3D-effekter
+- `app.js` – knapper og interaktion
+- `.github/workflows/pages.yml` – automatisk udgivelse
+- `MASTERPROMPT.md` – fast arbejdsinstruks
+- `SECURITY.md` – sikkerhedsregler
+
+Repositoryet indeholder også en mere avanceret React/TypeScript-version til eventuel senere privat hosting.
 
 ## Arbejdsgang
 
-1. Opret en særskilt feature-branch til større ændringer.
-2. Opdater app, README og MASTERPROMPT.md sammen.
-3. Kør build og test.
-4. Opret Pull Request.
-5. Merge først efter grønne sikkerheds- og kvalitetskontroller.
+1. Undersøg de eksisterende filer.
+2. Bevar funktioner, der allerede virker.
+3. Opdater app, README og MASTERPROMPT sammen.
+4. Kontrollér, at der ikke findes hemmelige oplysninger.
+5. Test ændringerne.
+6. Udgiv via GitHub Pages.
 
-## Sikkerhed og privatliv
+## Sikkerhed
 
-- Repositoryet skal forblive **private**.
-- Appen må ikke udgives med almindelig offentlig GitHub Pages.
-- Adgang til den kørende app styres af den private hostingløsning.
-- API-nøgler, passwords, tokens, personnumre og fortrolige oplysninger må aldrig commits.
-- Brug GitHub Secrets til eventuelle fremtidige hemmeligheder.
-- Se SECURITY.md for flere regler.
-
-## Centrale filer
-
-- app/page.tsx – indhold, knapper og interaktion
-- app/globals.css – samlet design, tema og 3D-effekter
-- MASTERPROMPT.md – fast arbejdsinstruks for den videre udvikling
-- docs/PROJEKTGRUNDLAG.md – kondenseret faglig arbejdsramme
-- .github/workflows – automatiske build- og sikkerhedskontroller
-
-## GitHub Pages-version
-
-Filerne index.html, style.css og app.js udgør en statisk version, der kan køre direkte med GitHub Pages. GitHub Pages må først aktiveres efter en bevidst beslutning, fordi Pages-adressen bliver offentligt tilgængelig, selv når repositoryet er privat.
+- Koden og GitHub Pages-appen er offentligt tilgængelige.
+- Kun repositoryets ejer og godkendte samarbejdspartnere kan redigere.
+- API-nøgler, passwords, tokens og personfølsomme oplysninger må aldrig lægges i browserkode eller commits.
+- Fremtidige API-kald skal gå gennem en serverfunktion, hvor nøglen ligger som en beskyttet miljøvariabel.
+- GitHub Secrets må kun bruges under workflows eller serverbaseret udgivelse; de må aldrig bygges ind i offentlige JavaScript-filer.
+- Hvis en hemmelig nøgle ved en fejl bliver committed, skal den straks tilbagekaldes og udskiftes.
+- Se `SECURITY.md` for flere regler.
 
 ## Status
 
-Version 0.2 – rammen fra Afgangsprojekt V1 og nyt design som elektronisk læringsspil. Teksten i rapportafsnittene er ikke overført.
+Version 0.3 – offentlig GitHub Pages-app med forbedrede legetøjsagtige 3D-knapper. Kun rammen fra Afgangsprojekt V1 er med; rapportens afsnitstekster er ikke offentliggjort.
