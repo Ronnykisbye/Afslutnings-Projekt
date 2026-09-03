@@ -13,3 +13,78 @@
 @media(max-width:820px){.buttons{grid-template-columns:repeat(3,minmax(0,1fr))}.controls{padding-inline:60px}}
 @media(max-width:600px){.topbar{height:60px;padding:0 13px}.console{margin-top:13px;padding:0 8px}.display-case{border-width:6px;border-radius:37px 37px 18px 18px;box-shadow:0 13px 0 #d56824,0 24px 38px rgba(49,70,89,.24);min-height:315px;padding:20px 18px 26px}.display-case:before{border-radius:29px 29px 12px 12px;inset:7px}.display{border-width:6px;border-radius:21px;height:263px;padding:18px 12px}.side-lights{display:none}.welcome-icon,.section-icon{font-size:31px;height:66px;width:66px}.display h1{font-size:27px}.hinge{gap:18px;height:24px}.hinge i{height:24px;width:68px}.controls{border-width:6px;border-radius:21px 21px 43px 43px;box-shadow:0 14px 0 #a42824,0 24px 38px rgba(49,70,89,.25);padding:29px 27px 40px}.controls:before{border-width:6px;border-radius:17px 17px 35px 35px;inset:12px}.buttons{gap:16px 11px}.toy-button{border-width:3px;box-shadow:0 7px 0 color-mix(in srgb,var(--tone) 70%,#68331e),0 10px 14px rgba(50,77,94,.18);min-height:84px;padding:9px 4px}.emoji{font-size:21px}.toy-button strong{font-size:9px}.shape-round{margin-inline:1px}.info-note{margin:0 12px 42px}.info-note p{line-height:1.4}footer{flex-direction:column;gap:6px;margin:0 12px;padding-inline:0}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* Version 0.3: tydelig legetøjsagtig 3D-stil inspireret af aktivitetsbrættet */
+.buttons{align-items:stretch;perspective:900px}
+.toy-button{
+  isolation:isolate;
+  min-height:112px;
+  border:5px solid rgba(255,255,255,.92);
+  border-bottom-color:rgba(255,255,255,.58);
+  background:
+    radial-gradient(circle at 28% 18%,rgba(255,255,255,.82) 0 5%,transparent 24%),
+    linear-gradient(145deg,color-mix(in srgb,var(--tone) 58%,#fff) 0%,var(--tone) 47%,color-mix(in srgb,var(--tone) 82%,#8c321b) 100%);
+  box-shadow:
+    0 12px 0 color-mix(in srgb,var(--tone) 64%,#6b2d20),
+    0 18px 0 rgba(115,45,31,.13),
+    0 25px 28px rgba(50,77,94,.24),
+    inset 0 8px 5px rgba(255,255,255,.52),
+    inset 0 -7px 8px rgba(92,41,27,.16);
+  transform:translateY(0) rotateX(0);
+  transition:transform .14s ease,box-shadow .14s ease,filter .14s ease;
+}
+.toy-button::after{
+  content:"";
+  position:absolute;
+  inset:7px 10px auto;
+  height:28%;
+  border-radius:inherit;
+  background:linear-gradient(rgba(255,255,255,.32),transparent);
+  pointer-events:none;
+  z-index:-1;
+}
+.toy-button:hover{
+  filter:saturate(1.08) brightness(1.04);
+  transform:translateY(-3px) rotateX(2deg);
+  box-shadow:
+    0 15px 0 color-mix(in srgb,var(--tone) 64%,#6b2d20),
+    0 21px 0 rgba(115,45,31,.13),
+    0 29px 30px rgba(50,77,94,.25),
+    inset 0 8px 5px rgba(255,255,255,.55),
+    inset 0 -7px 8px rgba(92,41,27,.16);
+}
+.toy-button:active{
+  transform:translateY(10px) scale(.985);
+  box-shadow:
+    0 2px 0 color-mix(in srgb,var(--tone) 64%,#6b2d20),
+    0 5px 8px rgba(50,77,94,.18),
+    inset 0 5px 7px rgba(92,41,27,.13);
+}
+.toy-button .emoji{
+  font-size:34px;
+  line-height:1;
+  filter:drop-shadow(0 3px 1px rgba(58,40,28,.25));
+}
+.toy-button strong{
+  font-size:13px;
+  line-height:1.12;
+  letter-spacing:.01em;
+  max-width:100%;
+}
+.number{
+  border:2px solid rgba(255,255,255,.72);
+  box-shadow:0 3px 0 rgba(74,43,28,.19);
+  font-size:10px;
+  left:8px;
+  top:8px;
+}
+.shape-round{border-radius:50% 46% 49% 45%;margin-inline:5px}
+.shape-square{border-radius:24px 20px 25px 19px}
+.shape-soft{border-radius:38% 25% 34% 23%}
+.shape-wide{border-radius:20px 28px 19px 25px}
+@media(max-width:600px){
+  .toy-button{min-height:96px;border-width:4px}
+  .toy-button .emoji{font-size:27px}
+  .toy-button strong{font-size:10px}
+}
