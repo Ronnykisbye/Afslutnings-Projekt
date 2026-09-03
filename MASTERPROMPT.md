@@ -36,7 +36,7 @@ Indhold, indledning, problemstilling, problemformulering, metodevalg, teori, emp
 - Knapper skal bevæge sig fysisk ned ved tryk.
 - Brug forskellige afrundede legetøjsformer.
 - Design mobil-først med store trykflader, tydelig skrift, høj kontrast og god luft.
-- Bevar mørkt og lyst tema.
+- Bevar mørkt og lyst tema.\n- Det øverste display skal vise indholdet, der hører til den valgte projektknap.\n- De tre sideknapper er Tilbage, L/M (lyst/mørkt tema) og Menu.\n- Vis et tydeligt dokumentlink, når en godkendt offentlig fil findes.
 - Brug tilgængelige labels, synligt tastaturfokus og støtte for reduceret bevægelse.
 - Appen skal være genkendelig og forståelig på få sekunder.
 
@@ -77,3 +77,8 @@ Når Ronny leverer nyt materiale:
 4. Lav en kort og tydelig visning i den tilhørende app-del.
 5. Opdater README, masterprompt og versionsstatus.
 6. Test og udgiv kun efter godkendte kontroller.
+
+
+## Beslutning i version 0.4
+
+Det øverste display er ikke længere kun en tom ramme. Det viser nu en kort faglig forklaring og status for den valgte projektknap. Godkendte offentlige ressourcer kan åbnes direkte. `Eksamen_Afgangsprojekt_v1.docx` er fundet i Ronnys private bibliotek, men må ikke kopieres til det offentlige GitHub-repository uden udtrykkelig godkendelse.

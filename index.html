@@ -26,7 +26,11 @@
             <p class="lead">Vælg den del af projektet, du vil arbejde med.</p>
             <p class="display-note">🔒 Kun rammen er oprettet – teksten kommer senere</p>
           </div>
-          <div class="side-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+          <nav class="side-controls" aria-label="Skærmens betjening">
+            <button id="backControl" class="side-control" type="button" aria-label="Gå tilbage" title="Tilbage"><span aria-hidden="true">↩</span><small>Tilbage</small></button>
+            <button id="modeControl" class="side-control" type="button" aria-label="Skift mellem lyst og mørkt tema" title="Lys eller mørk"><span aria-hidden="true">◐</span><small>L/M</small></button>
+            <button id="menuControl" class="side-control" type="button" aria-label="Vis hovedmenu" title="Menu"><span aria-hidden="true">⌂</span><small>Menu</small></button>
+          </nav>
         </div>
         <div class="hinge"><i></i><i></i><i></i></div>
         <div class="controls">
@@ -40,7 +44,7 @@
       </section>
     </main>
 
-    <footer><span>Version 0.3</span><span>Elektronisk læringsspil · Tryk på de farverige 3D-knapper</span></footer>
+    <footer><span>Version 0.4</span><span>Elektronisk læringsspil · Tryk på de farverige 3D-knapper</span></footer>
     <script src="app.js" defer></script>
   </body>
 </html>

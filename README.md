@@ -13,7 +13,7 @@ Offentlig projektapp til Ronnys AU-afgangsprojekt i informationsteknologi. Appen
 - tydelig blank 3D-effekt og fysisk trykbevægelse
 - mørkt og lyst tema
 - responsivt layout til mobil, tablet og computer
-- automatisk udgivelse med GitHub Pages
+- det øverste display viser indholdet for den valgte projektknap\n- tre aktive sideknapper: Tilbage, L/M og Menu\n- dokumentlinks vises kun, når filen må ligge offentligt\n- automatisk udgivelse med GitHub Pages
 - ingen annoncer, sporing eller tredjepartsanalyse
 
 Den offentlige version indeholder kun projektets ramme og overskrifter. Den egentlige rapporttekst tilføjes ikke offentligt uden Ronnys udtrykkelige godkendelse.
@@ -71,3 +71,8 @@ Repositoryet indeholder også en mere avanceret React/TypeScript-version til eve
 ## Status
 
 Version 0.3 – offentlig GitHub Pages-app med forbedrede legetøjsagtige 3D-knapper. Kun rammen fra Afgangsprojekt V1 er med; rapportens afsnitstekster er ikke offentliggjort.
+
+
+## Visning og dokumentlinks
+
+Når en projektknap vælges, viser skærmen afsnittets titel, forklaring, status og eventuelle dokumentlinks. Sideknapperne bruges til Tilbage, L/M (lyst/mørkt tema) og Menu. Den fundne arbejdsfil `Eksamen_Afgangsprojekt_v1.docx` ligger fortsat privat og er derfor ikke lagt i det offentlige repository.

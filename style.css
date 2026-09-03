@@ -88,3 +88,35 @@
   .toy-button .emoji{font-size:27px}
   .toy-button strong{font-size:10px}
 }
+
+
+/* Version 0.4: aktive sideknapper og indhold i skærmen */
+.display-case{padding-right:118px}
+.side-lights{display:none}
+.side-controls{display:flex;flex-direction:column;gap:13px;position:absolute;right:25px;top:70px;z-index:4}
+.side-control{
+  align-items:center;background:linear-gradient(145deg,#9284ff,#6254d6);
+  border:4px solid #fff16a;border-radius:50%;box-shadow:0 6px 0 #4438a5,0 9px 12px rgba(46,43,93,.25),inset 0 5px rgba(255,255,255,.5);
+  color:#fff;display:flex;flex-direction:column;height:58px;justify-content:center;padding:2px;text-shadow:0 1px 2px rgba(24,20,70,.45);transition:.13s;width:58px
+}
+.side-control span{font-size:20px;font-weight:900;line-height:1}
+.side-control small{font-size:8px;font-weight:900;line-height:1;margin-top:3px}
+.side-control:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.side-control:active{box-shadow:0 1px 0 #4438a5;transform:translateY(5px)}
+.side-control:disabled{cursor:not-allowed;filter:grayscale(.65);opacity:.5;transform:none}
+.side-control:focus-visible,.file-link:focus-visible{outline:4px solid #174d77;outline-offset:4px}
+.section-content{align-items:center;display:flex;flex-direction:column;gap:10px;max-width:610px;width:92%}
+.section-content>p:first-child{color:var(--muted);font-size:14px;line-height:1.45;margin:0;max-width:570px}
+.file-link{background:linear-gradient(145deg,#fff,#e7f7ff);border:2px solid #64bde8;border-radius:14px;box-shadow:0 5px 0 #3596c5;color:#174d77;font-size:13px;font-weight:900;padding:10px 15px;text-decoration:none}
+.file-link:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.file-link:active{box-shadow:0 1px 0 #3596c5;transform:translateY(4px)}
+.private-file-note{background:#fff8d9;border:1px solid #e9ba3e;border-radius:12px;color:#735413!important;font-size:11px!important;font-weight:700;margin:0!important;padding:8px 11px}
+.content-status{background:rgba(255,255,255,.75);border-radius:99px;color:#39778a;font-size:10px;font-weight:900;padding:6px 10px}
+@media(max-width:600px){
+  .display-case{padding-right:18px}
+  .side-controls{bottom:18px;flex-direction:row;gap:10px;right:50%;top:auto;transform:translateX(50%)}
+  .side-control{height:45px;width:45px}
+  .side-control span{font-size:16px}.side-control small{font-size:7px}
+  .display{padding-bottom:72px}
+  .section-content>p:first-child{font-size:12px}
+}
