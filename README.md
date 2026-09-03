@@ -86,3 +86,10 @@ Dokumentlinks åbner nu inde i appens egen skærm. Skærmen udvides til en stor,
 ## Tydelig betjening i version 0.6
 
 Sideknapperne Tilbage, Lys/mørk og Menu er gjort markant større med mindst 44 pixels trykflade, større tekst, stærk kontrast og tydelig dybde. På mobil vises de som tre brede knapper på én række nederst i skærmen.
+
+
+## OneDrive-projektfil i version 0.7
+
+Knappen **Endelig opgave** er nu forbundet med den delte Word-fil `Eksamen_Afgangsprojekt_med_menuer.docx`. Dokumentet forsøges vist i en stor Word-lignende læseskærm inde i appen. Der findes altid **Tilbage**, **Luk** og en reserveknap til at åbne dokumentet direkte i OneDrive. Selve Word-filen kopieres ikke til GitHub.
+
+Bemærk: Det faste delingslink står i den offentlige browserkode. Adgangen til dokumentet styres derfor af OneDrives delingsindstillinger. Hvis filen kun må kunne ses af ejeren, skal OneDrive-linket ændres til **Bestemte personer** eller **Kun dig**, men så kræves Microsoft-login i appen.

@@ -18,6 +18,8 @@ const sections = [
   { number:"+", shortTitle:"Ekstra", title:"Ekstra plads", icon:"✨", color:"sky", shape:"soft", text:"Reserveområde til et nyt afsnit, en funktion eller et dokument, som vi får brug for senere." }
 ];
 
+const DEFAULT_ONEDRIVE_URL = "https://1drv.ms/w/c/ece7ebdbe34590e4/IQDIPhkvBgsUSad7B1YBEv8rASpACKXzm81zi7SU3ZaeRXo?e=VfPOqe";
+
 const display = document.querySelector("#display");
 const displayCase = document.querySelector(".display-case");
 const buttons = document.querySelector("#buttons");
@@ -101,32 +103,30 @@ function openSection(section, remember = true) {
 }
 
 function addOneDriveControls(container) {
-  const saved = localStorage.getItem("afgang_onedrive_url");
-  if (saved) {
-    const openButton = makeButton("📄 Åbn projektfil fra OneDrive", "file-link final-file-link", () => {
-      window.open(saved, "_blank", "noopener,noreferrer");
-    });
-    const changeButton = makeButton("Skift link", "link-settings-button", () => {
-      localStorage.removeItem("afgang_onedrive_url");
-      openSection(activeSection, false);
-    });
-    const safeNote = document.createElement("p");
-    safeNote.className = "private-file-note";
-    safeNote.textContent = "🔒 Linket er kun gemt på denne enhed – ikke i GitHub.";
-    container.append(openButton, changeButton, safeNote);
-    return;
-  }
+  const url = localStorage.getItem("afgang_onedrive_url") || DEFAULT_ONEDRIVE_URL;
+  const readButton = makeButton("📖 Læs projektfilen i appen", "file-link final-file-link", () => openOneDriveDocument(url));
+  const externalButton = makeButton("↗ Åbn i OneDrive", "file-link onedrive-external", () => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+  const changeButton = makeButton("Brug et andet OneDrive-link", "link-settings-button", () => showOneDriveLinkSetup(container));
+  const note = document.createElement("p");
+  note.className = "private-file-note";
+  note.textContent = "Word-filen bliver i OneDrive. Hvis læseren ikke åbner, kan du bruge knappen Åbn i OneDrive.";
+  container.append(readButton, externalButton, changeButton, note);
+}
 
+function showOneDriveLinkSetup(container) {
+  container.querySelector(".onedrive-setup")?.remove();
   const setup = document.createElement("div");
   setup.className = "onedrive-setup";
   const label = document.createElement("label");
   label.htmlFor = "onedriveUrl";
-  label.textContent = "Indsæt dit private OneDrive-link:";
+  label.textContent = "Indsæt et andet OneDrive-link på denne enhed:";
   const input = document.createElement("input");
   input.id = "onedriveUrl";
   input.type = "url";
   input.inputMode = "url";
-  input.placeholder = "https://...";
+  input.placeholder = "https://1drv.ms/...";
   input.autocomplete = "off";
   const save = makeButton("Gem link på denne enhed", "file-link", () => {
     const value = input.value.trim();
@@ -137,11 +137,53 @@ function addOneDriveControls(container) {
     localStorage.setItem("afgang_onedrive_url", value);
     openSection(activeSection, false);
   });
+  const reset = makeButton("Brug den faste projektfil igen", "link-settings-button", () => {
+    localStorage.removeItem("afgang_onedrive_url");
+    openSection(activeSection, false);
+  });
   const message = document.createElement("p");
   message.className = "input-message";
   message.setAttribute("aria-live", "polite");
-  setup.append(label, input, save, message);
+  setup.append(label, input, save, reset, message);
   container.append(setup);
+}
+
+function openOneDriveDocument(url) {
+  readerOpen = true;
+  displayCase.classList.add("is-expanded");
+  display.classList.add("document-view");
+  document.body.classList.add("reader-open");
+  display.replaceChildren();
+
+  const toolbar = document.createElement("div");
+  toolbar.className = "reader-toolbar";
+  const back = makeButton("‹ Tilbage", "reader-back", closeDocument);
+  const heading = document.createElement("strong");
+  heading.textContent = "Den endelige projektopgave";
+  const close = makeButton("Luk ✕", "reader-close", closeDocument);
+  toolbar.append(back, heading, close);
+
+  const frameWrap = document.createElement("div");
+  frameWrap.className = "office-frame-wrap";
+  const iframe = document.createElement("iframe");
+  iframe.className = "office-frame";
+  iframe.title = "Word-dokument: Den endelige projektopgave";
+  iframe.src = "https://view.officeapps.live.com/op/embed.aspx?src=" + encodeURIComponent(url);
+  iframe.loading = "eager";
+  iframe.referrerPolicy = "no-referrer";
+  iframe.setAttribute("allowfullscreen", "");
+
+  const fallback = document.createElement("div");
+  fallback.className = "office-fallback";
+  const text = document.createElement("p");
+  text.textContent = "Kan du ikke se dokumentet?";
+  const open = makeButton("↗ Åbn direkte i OneDrive", "file-link final-file-link", () => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+  fallback.append(text, open);
+  frameWrap.append(iframe, fallback);
+  display.append(toolbar, frameWrap);
+  updateSideControls();
 }
 
 function isAllowedOneDriveUrl(value) {

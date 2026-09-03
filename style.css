@@ -212,3 +212,17 @@
   }
   .display-case.is-expanded .display{padding-bottom:76px}
 }
+
+
+/* Version 0.7: Word-dokument fra OneDrive i appens læseskærm */
+.onedrive-external{background:linear-gradient(145deg,#ffffff,#dff4ff);border-color:#57a9d2;color:#174d77}
+.office-frame-wrap{background:#dfe6ea;display:flex;flex-direction:column;height:calc(100% - 55px);min-height:0}
+.office-frame{background:#fff;border:0;flex:1;min-height:360px;width:100%}
+.office-fallback{align-items:center;background:#fff8d9;border-top:1px solid #e9ba3e;display:flex;gap:12px;justify-content:center;padding:10px 14px}
+.office-fallback p{color:#735413;font-size:13px;font-weight:800;margin:0}
+@media(max-width:600px){
+  .office-frame-wrap{height:calc(100% - 49px)}
+  .office-frame{min-height:0}
+  .office-fallback{align-items:stretch;flex-direction:column;gap:7px;padding:8px}
+  .office-fallback p{font-size:12px;text-align:center}
+}

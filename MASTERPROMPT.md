@@ -92,3 +92,8 @@ Dokumenter skal som udgangspunkt læses inde i appens skærm. Ved valg af et dok
 ## Beslutning i version 0.6
 
 Navigationsknapper må aldrig være små runde knapper med mikrotekst. Tilbage, Lys/mørk og Menu skal have store trykflader, mindst 12 px synlig labeltekst, høj kontrast og et forståeligt symbol. På mobil placeres de som tre brede knapper på én række nederst i skærmen. Læsbarhed har højere prioritet end at efterligne referencelegetøjets præcise knapstørrelser.
+
+
+## Beslutning i version 0.7
+
+Den delte OneDrive-fil `Eksamen_Afgangsprojekt_med_menuer.docx` er knyttet til knappen Endelig opgave. Appen skal først forsøge at vise Word-dokumentet inde i den udvidede læseskærm via Microsofts Office-læser og samtidig tilbyde direkte åbning i OneDrive som reserve. Selve dokumentet må ikke kopieres til GitHub. Fordi GitHub Pages og browserkoden er offentlige, er det OneDrives delingsindstillinger og eventuelle Microsoft-login, der afgør, hvem der kan læse filen.
