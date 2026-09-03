@@ -176,3 +176,39 @@
   .word-paper{font-size:15px;line-height:1.55;margin:12px auto 30px;min-height:calc(100% - 75px);padding:28px 22px}
   .word-paper h2{font-size:24px}.word-paper h3{font-size:20px}
 }
+
+
+/* Version 0.6: store og letlæselige navigationsknapper */
+.display-case{padding-right:150px}
+.side-controls{gap:16px;right:22px;top:58px}
+.side-control{
+  border:4px solid #fff48a;border-radius:22px;
+  box-shadow:0 7px 0 #30258f,0 11px 16px rgba(35,32,82,.32),inset 0 6px rgba(255,255,255,.5);
+  height:68px;padding:6px 8px;width:104px
+}
+.side-control span{font-size:25px;line-height:1}
+.side-control small{font-size:14px;line-height:1.05;margin-top:5px;white-space:nowrap}
+.side-control:disabled{
+  background:linear-gradient(145deg,#a99b75,#776b4c);border-color:#fff0ae;
+  box-shadow:0 5px 0 #51472e,0 8px 12px rgba(35,32,82,.2);filter:none;opacity:.78
+}
+.display-case.is-expanded{padding-right:150px}
+.display-case.is-expanded .side-controls{right:22px;top:70px}
+@media(max-width:600px){
+  .display-case{padding-right:18px}
+  .display{padding-bottom:94px}
+  .side-controls{
+    align-items:stretch;bottom:17px;display:grid;gap:8px;grid-template-columns:repeat(3,minmax(0,1fr));
+    left:25px;right:25px;top:auto;transform:none
+  }
+  .side-control{
+    border-width:3px;border-radius:16px;height:58px;min-width:0;padding:5px 3px;width:100%
+  }
+  .side-control span{font-size:21px}
+  .side-control small{font-size:12px;margin-top:4px}
+  .display-case.is-expanded{padding-right:12px}
+  .display-case.is-expanded .side-controls{
+    bottom:9px;left:18px;right:18px;top:auto;transform:none
+  }
+  .display-case.is-expanded .display{padding-bottom:76px}
+}

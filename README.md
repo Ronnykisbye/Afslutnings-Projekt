@@ -81,3 +81,8 @@ Når en projektknap vælges, viser skærmen afsnittets titel, forklaring, status
 ## Læsetilstand i version 0.5
 
 Dokumentlinks åbner nu inde i appens egen skærm. Skærmen udvides til en stor, rolig Word-lignende læseflade, og Tilbage/Luk er altid synlig. Escape-tasten lukker også læsetilstanden. Knappen Endelig opgave er fremhævet ekstra tydeligt. Et privat OneDrive-link kan gemmes lokalt på brugerens egen enhed; linket commits aldrig til GitHub.
+
+
+## Tydelig betjening i version 0.6
+
+Sideknapperne Tilbage, Lys/mørk og Menu er gjort markant større med mindst 44 pixels trykflade, større tekst, stærk kontrast og tydelig dybde. På mobil vises de som tre brede knapper på én række nederst i skærmen.
