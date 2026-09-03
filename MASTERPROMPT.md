@@ -82,3 +82,8 @@ Når Ronny leverer nyt materiale:
 ## Beslutning i version 0.4
 
 Det øverste display er ikke længere kun en tom ramme. Det viser nu en kort faglig forklaring og status for den valgte projektknap. Godkendte offentlige ressourcer kan åbnes direkte. `Eksamen_Afgangsprojekt_v1.docx` er fundet i Ronnys private bibliotek, men må ikke kopieres til det offentlige GitHub-repository uden udtrykkelig godkendelse.
+
+
+## Beslutning i version 0.5
+
+Dokumenter skal som udgangspunkt læses inde i appens skærm. Ved valg af et dokumentlink udvides skærmen til en Word-lignende læsetilstand med god typografi, rulning og altid synlige Tilbage- og Luk-knapper. Alle almindelige afsnitsvisninger skal også have en synlig Tilbage-knap. Endelig opgave skal være appens tydeligst markerede projektknap. OneDrive-linket til den endelige opgave gemmes kun i browserens localStorage og må aldrig hardcodes eller commits til det offentlige repository.

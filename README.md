@@ -76,3 +76,8 @@ Version 0.3 – offentlig GitHub Pages-app med forbedrede legetøjsagtige 3D-kna
 ## Visning og dokumentlinks
 
 Når en projektknap vælges, viser skærmen afsnittets titel, forklaring, status og eventuelle dokumentlinks. Sideknapperne bruges til Tilbage, L/M (lyst/mørkt tema) og Menu. Den fundne arbejdsfil `Eksamen_Afgangsprojekt_v1.docx` ligger fortsat privat og er derfor ikke lagt i det offentlige repository.
+
+
+## Læsetilstand i version 0.5
+
+Dokumentlinks åbner nu inde i appens egen skærm. Skærmen udvides til en stor, rolig Word-lignende læseflade, og Tilbage/Luk er altid synlig. Escape-tasten lukker også læsetilstanden. Knappen Endelig opgave er fremhævet ekstra tydeligt. Et privat OneDrive-link kan gemmes lokalt på brugerens egen enhed; linket commits aldrig til GitHub.
