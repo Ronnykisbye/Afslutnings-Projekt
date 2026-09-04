@@ -102,3 +102,8 @@ Den delte OneDrive-fil `Eksamen_Afgangsprojekt_med_menuer.docx` er knyttet til k
 ## Beslutning i version 0.8
 
 Den indbyggede Office-læser er fjernet, fordi et almindeligt OneDrive-delingslink ikke kunne indlæses stabilt i Microsofts eksterne dokumentviser. Endelig opgave skal åbnes direkte i OneDrive, så Microsofts login og delingsindstillinger beskytter dokumentet. Filens aktuelle navn er `Eksamen_Afgangsprojekt arbejds udgave.docx`. Det godkendte afsnit Indledning er offentliggjort i appen som syv læsevenlige tekstafsnit; øvrige rapportafsnit må fortsat kun tilføjes efter Ronnys udtrykkelige godkendelse.
+
+
+## Beslutning i version 0.9
+
+Appen skal være installerbar som PWA. Det faste appikon er en gul/orange legetøjscomputer med AU på den blå skærm og tre farvede knapper. Følgende formater skal bevares: `public/icon-192.png`, `public/icon-512.png`, `public/icon-maskable-512.png`, `public/apple-touch-icon.png` og SVG-favicon. Manifest og service worker skal fortsat bruge relative stier, så installation virker fra GitHub Pages-undermappen `/Afslutnings-Projekt/`.

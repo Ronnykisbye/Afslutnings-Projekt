@@ -305,3 +305,10 @@ document.addEventListener("keydown", (event) => {
 setTheme(localStorage.getItem("afgang_theme") === "dark" ? "dark" : "light");
 renderMenu();
 showWelcome();
+
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  });
+}

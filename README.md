@@ -98,3 +98,8 @@ Bemærk: Det faste delingslink står i den offentlige browserkode. Adgangen til 
 ## Indledning og sikker OneDrive-åbning i version 0.8
 
 Afsnittet **Indledning** fra `Eksamen_Afgangsprojekt arbejds udgave.docx` er indsat som syv læsevenlige afsnit i appens skærm. Kun dette godkendte afsnit er offentliggjort. Knappen **Endelig opgave** viser det nye filnavn og åbner arbejdsudgaven direkte i OneDrive, hvor Microsofts login og delingsindstillinger styrer adgangen. Den fejlramte indbyggede Office-læser er fjernet.
+
+
+## Installationsikon og PWA i version 0.9
+
+Appen har nu sit eget installationsikon i korrekte webapp-formater: PNG 192×192 og 512×512 til Android, en særlig maskérbar Android-version samt PNG 180×180 til iPhone/iPad. Ikonet forestiller appens gule/orange legetøjscomputer med AU på skærmen og tre farvede 3D-knapper. `manifest.webmanifest` og `sw.js` gør det muligt at installere appen på startskærmen og åbne den i et selvstændigt appvindue. Appens grundfiler gemmes desuden til brug uden netforbindelse.

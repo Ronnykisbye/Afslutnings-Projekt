@@ -1,0 +1,33 @@
+{
+  "name": "Mit AU-afgangsprojekt",
+  "short_name": "AU Projekt",
+  "description": "Projektapp til AU-afgangsprojektet i informationsteknologi",
+  "lang": "da-DK",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffb82e",
+  "theme_color": "#ffb82e",
+  "icons": [
+    {
+      "src": "public/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "public/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "public/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
