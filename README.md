@@ -103,3 +103,8 @@ Afsnittet **Indledning** fra `Eksamen_Afgangsprojekt arbejds udgave.docx` er ind
 ## Installationsikon og PWA i version 0.9
 
 Appen har nu sit eget installationsikon i korrekte webapp-formater: PNG 192×192 og 512×512 til Android, en særlig maskérbar Android-version samt PNG 180×180 til iPhone/iPad. Ikonet forestiller appens gule/orange legetøjscomputer med AU på skærmen og tre farvede 3D-knapper. `manifest.webmanifest` og `sw.js` gør det muligt at installere appen på startskærmen og åbne den i et selvstændigt appvindue. Appens grundfiler gemmes desuden til brug uden netforbindelse.
+
+
+## Projektindhold i version 1.0
+
+Den opdaterede arbejdsudgave fra 4. september 2026 er sammenlignet med den forrige fil. **Indledningen var uændret.** Den nye problemstilling, problemformuleringen med tre underspørgsmål og Lex-kilden er tilføjet til deres respektive knapper. Teksten vises i læsevenlige afsnit, og underspørgsmålene står som en tydelig punktliste. Små åbenlyse stave- og tegnsætningsfejl er rettet uden at ændre det faglige indhold.

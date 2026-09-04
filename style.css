@@ -223,3 +223,11 @@
 @media(max-width:600px){
   .section-article{font-size:16px;line-height:1.6;padding:22px 18px}
 }
+
+
+/* Version 1.0: problemstilling, problemformulering og kilder */
+.section-article h2{color:#17324d;font-family:Arial,Helvetica,sans-serif;font-size:20px;margin:24px 0 10px}
+.section-article ul{margin:0;padding-left:24px}
+.section-article li{margin:0 0 12px;padding-left:4px}
+.source-link{background:#eef8ff;border:2px solid #64bde8;border-radius:12px;color:#174d77;font-size:14px;font-weight:900;padding:10px 14px;text-decoration:none}
+.source-link:hover{text-decoration:underline}

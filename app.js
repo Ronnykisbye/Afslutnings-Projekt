@@ -3,8 +3,8 @@
 const sections = [
   { number:"01", shortTitle:"Indhold", title:"Menu og indholdsfortegnelse", icon:"📑", color:"red", shape:"square", text:"Her samles projektets indholdsfortegnelse og overblik over alle afsnit.", resource:{label:"Læs projektgrundlaget",href:"docs/PROJEKTGRUNDLAG.md",format:"markdown"} },
   { number:"02", shortTitle:"Indledning", title:"Indledning", icon:"📘", color:"orange", shape:"round", text:"Min vej fra elektriker til IT-studerende og mine erfaringer med AI.", paragraphs:["Jeg har arbejdet omkring 40 år som elektriker og har derfor en lang praktisk og teknisk baggrund, hvor problemløsning, fejlfinding og forståelse af tekniske systemer har været en naturlig del af mit arbejdsliv. Desværre måtte jeg af helbredsmæssige årsager vælge at omskole mig. Det blev inden for IT og igennem min akademiuddannelse har jeg arbejdet blandt andet med systemdrift, IT-sikkerhed, programmering i Python, cloud, databaser, automatisering, forretningsmæssig IT og anvendelse af kunstig intelligens.","Uddannelsen har været både spændende og krævende. Flere af fagene indeholder meget teori, og en del af undervisningsmaterialet er på engelsk. For mig betyder det meget arbejde med at oversætte og forstå de faglige begreber og omsætte teorien til noget, jeg forstår.","Efter at jeg havde kurset i Anvendelse af kunstig intelligens, begyndte jeg i stigende grad at bruge ChatGPT (AI) som min assistent. I starten var det mest til at oversætte og forklare begreberne i et tempo, som bedre passede til mig. Efterhånden begyndte jeg også at anvende AI til at rette mine opgaver og gennemlæse mine skriftlige opgaver på et mere teknisk niveau.","Jeg har blandt andet i mine senere kurser brugt AI til at hjælpe med programmering som eksempler for de opgaver, jeg skulle løse, eller den har vist mig, hvordan jeg kunne lave normaliserede databaser. Den har hjulpet mig med opsætningen af lokale netværk og med at automatisere processer. Jeg har også brugt AI til sparring til mine skriftlige opgaver, hvor den er kommet med idéer, kritik, struktur og sproglige formuleringer.","Det har vist mig en udvikling, som jeg synes er ret interessant. Opgaver, som tidligere krævede lang tid og faglig fordybelse at løse, kan i dag løses eller understøttes af AI på relativt kort tid. Det gælder for eksempel programmering, databaseopbygning og automatisering.","Men samtidig kan der opstå et dilemma. AI kan være et meget effektivt hjælpemiddel, men det kan også være fristende at overlade en stor del af arbejdet til den slags teknologi. Derfor dukker spørgsmålet op om, hvilke kompetencer der fortsat er brug for eller er nødvendige, når AI i stigende grad kan løse opgaverne, og om det er noget, vi skal være bange for.","Som studerende og med mange års teknisk erfaring og baggrund bliver jeg interesseret i denne udvikling. Hvor jeg tidligere selv skulle løse alle de tekniske udfordringer, føler jeg, at mit fokus er ændret til i højere grad at skulle beskrive det ønskede resultat, opstille krav og kvalitetssikre den løsning, som AI bidrager til at skabe."] },
-  { number:"03", shortTitle:"Problem", title:"Problemstilling", icon:"🔍", color:"yellow", shape:"soft", text:"Her beskrives den fagligt væsentlige udfordring, som projektet undersøger." },
-  { number:"04", shortTitle:"Spørgsmål", title:"Problemformulering", icon:"🎯", color:"green", shape:"square", text:"Her placeres det præcise hovedspørgsmål og eventuelle underspørgsmål, som konklusionen senere skal besvare." },
+  { number:"03", shortTitle:"Problem", title:"Problemstilling", icon:"🔍", color:"yellow", shape:"soft", text:"AI ændrer arbejdsformer og kompetencekrav inden for centrale IT-områder.", paragraphs:["AI er på få år blevet udbredt. ChatGPT blev lanceret i november 2022 (Lex, 2026) og er siden blevet et værktøj, som kan anvendes inden for mange forskellige områder i IT. Den kan blandt andet hjælpe med programmering, databaser, automatisering og IT-sikkerhed. Opgaver, som tidligere krævede meget manuelt arbejde og faglig viden, kan i nogle tilfælde løses helt eller understøttes hurtigere med hjælp fra AI.","Det rejser nogle spørgsmål om, hvordan AI påvirker den måde, vi arbejder med IT på. Hvis AI kan hjælpe med dele af den tekniske løsning, bliver det relevant at undersøge, hvilke kompetencer der stadig er nødvendige, og om fokus i højere grad flytter sig mod at kunne beskrive det ønskede resultat, opstille krav og efterfølgende vurdere og kvalitetssikre løsninger.","Det er samtidig ikke givet, at AI påvirker alle IT-områder på samme måde. Fag som programmering, databaser, automatisering og IT-sikkerhed stiller forskellige krav til både faglig viden og kontrol af resultatet. Jeg vil derfor undersøge disse fire områder gennem egne erfaringer, praktiske eksempler og relevante faglige kilder.","Derudover vil jeg undersøge, hvordan almindelige brugere af IT anvender AI i dag. Her vil jeg blandt andet se på, hvad de bruger AI til, hvilke fordele de oplever, hvilke problemer de møder, og om de oplever, at AI har ændret den måde, de løser deres opgaver på. Dette vil jeg blandt andet undersøge via et spørgeskema.","Undersøgelsen fokuserer på, hvordan AI anvendes inden for disse fire områder, hvilke fordele og ulemper brugerne oplever, og hvilken faglig viden der fortsat er nødvendig for at kunne bruge AI på en forsvarlig måde."] },
+  { number:"04", shortTitle:"Spørgsmål", title:"Problemformulering", icon:"🎯", color:"green", shape:"square", text:"Projektets hovedspørgsmål og tre underspørgsmål.", paragraphs:["Hvordan bruger almindelige IT-brugere AI i dag, og hvordan har AI ændret den måde, de løser deres opgaver på? Samtidig vil jeg undersøge, hvilken betydning denne udvikling kan have for IT-fag som programmering, databaser, automatisering og IT-sikkerhed."], listTitle:"Underspørgsmål", bullets:["Hvordan bruger almindelige IT-brugere i dag AI til at løse deres opgaver?","Hvilke fordele, ulemper og andre udfordringer oplever de?","Hvilken betydning har AI for de kompetencer, der er nødvendige inden for programmering, databaser, automatisering og IT-sikkerhed?"] },
   { number:"05", shortTitle:"Metodevalg", title:"Metodevalg og undersøgelsesdesign", icon:"🧪", color:"cyan", shape:"wide", text:"Her begrundes projektets metode, dataindsamling, fremgangsmåde og undersøgelsesdesign." },
   { number:"06", shortTitle:"Teori", title:"Teori og modeller", icon:"🧠", color:"blue", shape:"round", text:"Her samles de teorier, modeller og faglige begreber, der bruges i analysen." },
   { number:"07", shortTitle:"Empiri", title:"Empiriske data", icon:"📋", color:"purple", shape:"soft", text:"Her samles dokumenterede målinger, observationer, tests og andet datagrundlag." },
@@ -12,7 +12,7 @@ const sections = [
   { number:"09", shortTitle:"Kritik", title:"Kritiske overvejelser", icon:"⚠️", color:"amber", shape:"round", text:"Her vurderes metode, kilder, begrænsninger, usikkerheder og mulige fejlkilder." },
   { number:"10", shortTitle:"Konklusion", title:"Konklusion", icon:"✅", color:"lime", shape:"wide", text:"Her besvares problemformuleringen klart og uden at introducere nyt stof." },
   { number:"11", shortTitle:"Perspektiv", title:"Perspektivering", icon:"🧭", color:"teal", shape:"soft", text:"Her sættes projektets resultater ind i en større faglig eller praktisk sammenhæng." },
-  { number:"12", shortTitle:"Kilder", title:"Litteraturliste", icon:"📚", color:"indigo", shape:"square", text:"Her samles alle anvendte bøger, artikler, hjemmesider og øvrige kilder." },
+  { number:"12", shortTitle:"Kilder", title:"Litteraturliste", icon:"📚", color:"indigo", shape:"square", text:"Anvendte materialer og faglige kilder.", paragraphs:["Materiale udleveret på dette kursus.","ChatGPT (anvendt som assistent til idéudvikling, struktur og sproglig formulering).","Lex (2026): OpenAI, Den Store Danske. Hentet 4. september 2026."], links:[{label:"Åbn kilden hos Lex",href:"https://lex.dk/OpenAI"}] },
   { number:"13", shortTitle:"Bilag", title:"Bilagsoversigt", icon:"📎", color:"violet", shape:"round", text:"Her samles projektets bilag og en oversigt, der gør dem nemme at finde." },
   { number:"14", shortTitle:"Endelig opgave", title:"Eksamen_Afgangsprojekt arbejds udgave", icon:"🏆", color:"gold", shape:"wide", text:"Her åbner du den opdaterede arbejdsudgave direkte og sikkert i OneDrive.", oneDrive:true },
   { number:"+", shortTitle:"Ekstra", title:"Ekstra plads", icon:"✨", color:"sky", shape:"soft", text:"Reserveområde til et nyt afsnit, en funktion eller et dokument, som vi får brug for senere." }
@@ -92,7 +92,32 @@ function openSection(section, remember = true) {
       paragraph.textContent = text;
       article.append(paragraph);
     });
+    if (section.listTitle) {
+      const subheading = document.createElement("h2");
+      subheading.textContent = section.listTitle;
+      article.append(subheading);
+    }
+    if (section.bullets) {
+      const list = document.createElement("ul");
+      section.bullets.forEach((text) => {
+        const item = document.createElement("li");
+        item.textContent = text;
+        list.append(item);
+      });
+      article.append(list);
+    }
     content.append(article);
+  }
+  if (section.links) {
+    section.links.forEach((link) => {
+      const anchor = document.createElement("a");
+      anchor.className = "source-link";
+      anchor.href = link.href;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+      anchor.textContent = `↗ ${link.label}`;
+      content.append(anchor);
+    });
   }
 
   if (section.resource) {
@@ -104,7 +129,7 @@ function openSection(section, remember = true) {
 
   const status = document.createElement("span");
   status.className = "content-status";
-  status.textContent = section.resource || section.oneDrive ? "Dokumentområde" : "Klar til indhold";
+  status.textContent = section.resource || section.oneDrive ? "Dokumentområde" : section.paragraphs ? "Indhold tilføjet" : "Klar til indhold";
   content.append(status);
 
   display.append(back, iconElement, kicker, heading, content);

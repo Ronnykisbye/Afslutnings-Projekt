@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "au-projekt-v0.9";
+const CACHE_NAME = "au-projekt-v1.0";
 const APP_SHELL = [
   "./",
   "./index.html",

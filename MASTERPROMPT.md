@@ -107,3 +107,8 @@ Den indbyggede Office-læser er fjernet, fordi et almindeligt OneDrive-delingsli
 ## Beslutning i version 0.9
 
 Appen skal være installerbar som PWA. Det faste appikon er en gul/orange legetøjscomputer med AU på den blå skærm og tre farvede knapper. Følgende formater skal bevares: `public/icon-192.png`, `public/icon-512.png`, `public/icon-maskable-512.png`, `public/apple-touch-icon.png` og SVG-favicon. Manifest og service worker skal fortsat bruge relative stier, så installation virker fra GitHub Pages-undermappen `/Afslutnings-Projekt/`.
+
+
+## Beslutning i version 1.0
+
+Ved nye arbejdsudgaver skal dokumentet sammenlignes med den senest behandlede udgave, så kun reelle ændringer overføres. Arbejdsudgaven af 4. september 2026 tilføjede problemstilling, problemformulering med tre underspørgsmål samt Lex-kilden. Disse dele er godkendt til offentlig visning i appen. Indledningen var uændret. Små entydige stave- og tegnsætningsfejl kan rettes ved overførslen, men faglig betydning og brugerens personlige stemme skal bevares.
