@@ -1,11 +1,11 @@
 "use strict";
 
-const CACHE_NAME = "au-projekt-v1.0";
+const CACHE_NAME = "au-projekt-v2.0";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./style.css",
-  "./app.js",
+  "./app.js?v=2",
   "./manifest.webmanifest",
   "./public/favicon.svg",
   "./public/icon-192.png",
