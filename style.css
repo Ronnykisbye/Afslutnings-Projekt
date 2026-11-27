@@ -231,3 +231,12 @@
 .section-article li{margin:0 0 12px;padding-left:4px}
 .source-link{background:#eef8ff;border:2px solid #64bde8;border-radius:12px;color:#174d77;font-size:14px;font-weight:900;padding:10px 14px;text-decoration:none}
 .source-link:hover{text-decoration:underline}
+
+/* 2.1: scrollable reading area, controls outside the screen */
+.display{align-content:safe center;grid-auto-rows:max-content;min-width:0;overscroll-behavior-y:contain;overflow-x:hidden}
+.display:has(.section-content){align-content:start;justify-items:center;display:flex;flex-direction:column;align-items:center;text-align:center}
+.display:has(.section-content)>*{flex-shrink:0;max-width:100%}
+.section-content{width:100%;min-width:0;max-width:760px}
+.section-article{overflow-wrap:anywhere;min-width:0}
+.toy-button{min-width:0}.toy-button strong{overflow-wrap:anywhere;hyphens:auto;max-width:100%}
+@media(max-width:600px){.display-case:not(.is-expanded){padding:20px 18px 22px;min-height:0}.display-case:not(.is-expanded) .display{height:clamp(280px,48dvh,480px);padding:16px 10px}.display-case:not(.is-expanded) .side-controls{position:relative;inset:auto;transform:none;margin-top:12px;gap:8px}.display-case:not(.is-expanded) .section-article{padding:16px 12px;font-size:15px;line-height:1.55}.display h1{overflow-wrap:anywhere}.toy-button strong{font-size:10px;line-height:1.2}.display-case.is-expanded .side-controls{top:auto;bottom:9px}}
