@@ -64,7 +64,7 @@ const sections = [
   {
     "number": "2",
     "title": "Problemformulering",
-    "shortTitle": "Problemformulering",
+    "shortTitle": "Problem-formulering",
     "icon": "🎯",
     "color": "green",
     "shape": "soft",
@@ -100,7 +100,7 @@ const sections = [
   {
     "number": "3.1",
     "title": "Metodevalg og undersøgelsesdesign",
-    "shortTitle": "Metodevalg og undersøgelsesdesign",
+    "shortTitle": "Metodevalg",
     "icon": "🧪",
     "color": "cyan",
     "shape": "square",
@@ -478,6 +478,7 @@ function openSection(section, remember = true) {
   content.append(status);
 
   display.append(back, iconElement, kicker, heading, content);
+  display.scrollTop = 0;
   updateSideControls();
   document.querySelector("#app")?.scrollIntoView({ behavior:"smooth", block:"start" });
 }
@@ -583,6 +584,7 @@ function showWelcome() {
   closeReaderFrame();
   activeSection = null;
   history = [];
+  display.scrollTop = 0;
   display.innerHTML = '<button type="button" class="screen-back home-back" disabled aria-disabled="true">‹ Tilbage</button><div class="welcome-icon">✏️</div><p class="kicker">Mit AU-afgangsprojekt</p><h1>Tryk på en knap</h1><p class="lead">Vælg den del af projektet, du vil arbejde med.</p><p class="display-note">Hovedopgaven – uden bilag</p>';
   updateSideControls();
 }
